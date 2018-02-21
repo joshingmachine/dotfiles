@@ -13,6 +13,11 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+" Disable hjkl keys in normal mode
+nnoremap h <nop>
+nnoremap j <nop>
+nnoremap k <nop>
+nnoremap l <nop>
 
 " Adding vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))

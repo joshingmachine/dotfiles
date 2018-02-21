@@ -7,3 +7,4 @@ Mainly I'm just emulating the "classics", which I'll put below to credit them (b
 - https://github.com/holman/dotfiles
 - https://github.com/mathiasbynens/dotfiles
 - https://github.com/webpro/dotfiles
+- https://dougblack.io/words/a-good-vimrc.html
