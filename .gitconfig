@@ -1,4 +1,8 @@
 [alias]
     co = checkout
+    ignore = update-index --assume-unchanged
+    ignored = !git ls-files -v | grep '^[[:lower:]]' | sed -e 's/h //g'
+    unignore = update-index --no-assume-unchanged
+    unignore-all = !git ls-files -v | grep '^[[:lower:]]' | sed -e 's/h //g' | xargs -L1 git update-index --no-assume-unchanged
 [core]
-    editor = vim
+    editor = /usr/bin/vim
