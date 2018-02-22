@@ -11,6 +11,7 @@ endif
 call plug#begin('~/.vim/bundle')
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'editorconfig/editorconfig-vim'
 
 " Initialize plugin system
 call plug#end()
