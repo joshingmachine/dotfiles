@@ -1,23 +1,4 @@
-set nocompatible
-syntax on 
-set number 
-set encoding=utf-8
-
-" Disable arrow keys in normal mode
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-" Disable arrow keys in insert mode
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-" Disable hjkl keys in normal mode
-nnoremap h <nop>
-nnoremap j <nop>
-nnoremap k <nop>
-nnoremap l <nop>
+" PLUGINS
 
 " Adding vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -34,7 +15,32 @@ Plug 'altercation/vim-colors-solarized'
 " Initialize plugin system
 call plug#end()
 
+" OPTIONS
+
+set nocompatible
+syntax on 
+set number 
+set encoding=utf-8
+
 let g:solarized_termcolors=256
 set background=dark
 set t_Co=256
 colorscheme solarized
+
+" REMAPS
+
+" Disable arrow keys in normal mode
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+" Disable arrow keys in insert mode
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+" Disable hjkl keys in normal mode
+nnoremap h <nop>
+nnoremap j <nop>
+nnoremap k <nop>
+nnoremap l <nop>
