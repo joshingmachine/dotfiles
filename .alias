@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Default options
+alias ls="ls -aFl"
+
+# Quick navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Just for fun
+alias please="sudo"
+
+# Inspiration
+# https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
+# https://github.com/webpro/dotfiles/blob/master/system/.alias

@@ -45,3 +45,7 @@ nnoremap h <nop>
 nnoremap j <nop>
 nnoremap k <nop>
 nnoremap l <nop>
+
+" INSPIRATION
+" https://dougblack.io/words/a-good-vimrc.html
+" http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
