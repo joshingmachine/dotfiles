@@ -12,6 +12,7 @@ call plug#begin('~/.vim/bundle')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-surround'
 
 " Initialize plugin system
 call plug#end()
