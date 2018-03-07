@@ -6,3 +6,5 @@
     unignore-all = !git ls-files -v | grep '^[[:lower:]]' | sed -e 's/h //g' | xargs -L1 git update-index --no-assume-unchanged
 [core]
     editor = /usr/bin/vim
+[push]
+    followTags = true
