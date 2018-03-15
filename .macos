@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Disable startup sounds
+sudo nvram SystemAudioVolume=" "
+
+# Enable Full Keyboard Access / All controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
