@@ -7,6 +7,7 @@ ln -s ${BASEDIR}/.editorconfig ${HOME}/.editorconfig
 ln -s ${BASEDIR}/.gitconfig ${HOME}/.gitconfig
 ln -s ${BASEDIR}/.gitignore ${HOME}/.gitignore
 ln -s ${BASEDIR}/.nvm ${HOME}/.nvm
+ln -s ${BASEDIR}/.tmux.conf ${HOME}/.tmux.conf
 ln -s ${BASEDIR}/.zshrc ${HOME}/.zshrc
 
 # http://www.anishathalye.com/2014/08/03/managing-your-dotfiles/
