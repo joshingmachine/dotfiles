@@ -47,6 +47,8 @@ nnoremap h <nop>
 nnoremap j <nop>
 nnoremap k <nop>
 nnoremap l <nop>
+" Map ctrl+p to open fzf
+nnoremap <c-p> :FZF!<enter>
 
 " FZF
 
