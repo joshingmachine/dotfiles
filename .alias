@@ -9,6 +9,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# tmux + fzf
+alias tmux-af='tmux a -t $(tmux ls -F "#{session_name}" | fzf)'
+alias taf="tmux-af"
+
 # Just for fun
 alias please="sudo"
 
