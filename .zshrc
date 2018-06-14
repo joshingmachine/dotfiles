@@ -4,3 +4,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export FZF_DEFAULT_OPTS="--layout=reverse"
+
+source ./.alias
