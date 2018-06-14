@@ -1,6 +1,6 @@
 [alias]
     co = checkout
-    cof = !checkout $(git branch | fzf)
+    cof = !git checkout $(git branch | fzf)
     ignore = update-index --assume-unchanged
     ignored = !git ls-files -v | grep '^[[:lower:]]' | sed -e 's/h //g'
     jagoff = blame
