@@ -11,6 +11,7 @@ endif
 call plug#begin('~/.vim/bundle')
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-surround'
@@ -25,10 +26,11 @@ syntax on
 set number
 set encoding=utf-8
 
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 set background=dark
 set t_Co=256
-colorscheme solarized
+colorscheme gruvbox
+let g:gruvbox_contrast_dark="hard"
 
 " REMAPS
 
