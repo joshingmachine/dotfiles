@@ -11,9 +11,9 @@ endif
 call plug#begin('~/.vim/bundle')
 
 Plug 'altercation/vim-colors-solarized'
-Plug 'morhetz/gruvbox'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-surround'
 
 " Initialize plugin system
