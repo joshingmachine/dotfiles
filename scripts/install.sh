@@ -5,8 +5,14 @@
 # Mac
 if [[ "$OSTYPE" == "darwin"* ]]; then
 
-    # Install Homebrew
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    # Homebrew
+    if [[ $(command -v brew) == "" ]]; then
+        echo 'Installing Homebrew'
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    else
+        echo 'Updating Homebrew'
+        brew update
+    fi
 
     # Install everything in Brewfile
     brew bundle
@@ -23,7 +29,10 @@ fi
 # nvm (depends on git)
 export NVM_DIR="$HOME/.nvm"
 if ! [[ -s "$NVM_DIR/nvm.sh" ]]; then
-    git clone https://github.com/creationix/nvm.git ~/.nvm
-    cd ~/.nvm
-    git checkout v0.33.1
+    echo 'Installing nvm'
+    git clone https://github.com/creationix/nvm.git "$NVM_DIR"
+    cd "$NVM_DIR"
+    git checkout v0.33.11
+else
+    echo 'nvm already installed'
 fi
