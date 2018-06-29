@@ -6,7 +6,6 @@ ln -s ${BASEDIR}/.bashrc ${HOME}/.bashrc
 ln -s ${BASEDIR}/.editorconfig ${HOME}/.editorconfig
 ln -s ${BASEDIR}/.gitconfig ${HOME}/.gitconfig
 ln -s ${BASEDIR}/.gitignore ${HOME}/.gitignore
-ln -s ${BASEDIR}/.nvm ${HOME}/.nvm
 ln -s ${BASEDIR}/.tmux.conf ${HOME}/.tmux.conf
 ln -s ${BASEDIR}/.vim/ ${HOME}/.vim
 ln -s ${BASEDIR}/.zshrc ${HOME}/.zshrc
