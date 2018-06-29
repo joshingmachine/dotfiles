@@ -6,7 +6,7 @@
 if [[ "$OSTYPE" == "darwin"* ]]; then
 
     # Homebrew
-    if [[ $(command -v brew) == "" ]]; then
+    if [[ $(command -v brew) != "" ]]; then
         echo 'Uninstalling Homebrew'
         brew remove --force --ignore-dependencies $(brew list)
         brew cleanup
