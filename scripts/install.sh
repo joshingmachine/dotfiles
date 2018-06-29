@@ -3,9 +3,9 @@
 # Platform-dependent installations
 
 # Mac
-if [[ "$OSTYPE" == "darwin" ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
 
-    # Install Homebrew	
+    # Install Homebrew
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     # Install everything in Brewfile
@@ -13,7 +13,7 @@ if [[ "$OSTYPE" == "darwin" ]]; then
 
 # Ubuntu
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-    
+
     # Coming soon
     echo "No Ubuntu-specific installations"
 fi
