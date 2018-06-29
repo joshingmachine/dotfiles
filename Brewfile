@@ -8,6 +8,7 @@ brew 'tree'
 brew 'vim', args: ['override-system-vi']
 brew 'wget'
 brew 'yarn', args: ['without-node']
+brew 'zsh'
 
 cask 'firefox'
 cask 'google-chrome'
