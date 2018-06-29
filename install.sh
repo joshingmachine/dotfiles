@@ -1,11 +1,29 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Platform-dependent installations
 
-# nvm (https://github.com/creationix/nvm#manual-install)
+# Mac
+if [[ "$OSTYPE" == "darwin" ]]; then
 
-export NVM_DIR="$BASEDIR/.nvm" && (
-  git clone https://github.com/creationix/nvm.git "$NVM_DIR"
-  cd "$NVM_DIR"
-  git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
-) && \. "$NVM_DIR/nvm.sh"
+    # Install Homebrew	
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+    # Install everything in Brewfile
+    brew bundle
+
+# Ubuntu
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    
+    # Coming soon
+    echo "No Ubuntu-specific installations"
+fi
+
+# Platform-independent installations
+
+# nvm (depends on git)
+export NVM_DIR="$HOME/.nvm"
+if ! [[ -s "$NVM_DIR/nvm.sh" ]]; then
+    git clone https://github.com/creationix/nvm.git ~/.nvm
+    cd ~/.nvm
+    git checkout v0.33.1
+fi
