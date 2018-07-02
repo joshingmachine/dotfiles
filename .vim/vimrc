@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox', { 'dir': '~/.vim/colors/gruvbox' }
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 
