@@ -47,6 +47,7 @@ if ! [[ -s "$NVM_DIR/nvm.sh" ]]; then
     git fetch --tags
     latestTag=$(git describe --tags)
     git checkout $latestTag
+
     echo 'Symlinking default npm packages'
     ln -s "$DOTFILES_DIR/.nvm/default-packages" "$NVM_DIR/default-packages"
 else
