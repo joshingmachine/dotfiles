@@ -44,7 +44,10 @@ if ! [[ -s "$NVM_DIR/nvm.sh" ]]; then
     echo 'Installing nvm'
     git clone https://github.com/creationix/nvm.git "$NVM_DIR"
     cd "$NVM_DIR"
-    git checkout v0.33.11
+    git fetch --tags
+    latestTag=$(git describe --tags)
+    git checkout $latestTag
+    echo 'Symlinking default npm packages'
     ln -s "$DOTFILES_DIR/.nvm/default-packages" "$NVM_DIR/default-packages"
 else
     echo 'nvm already installed'
