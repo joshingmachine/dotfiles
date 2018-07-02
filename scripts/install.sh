@@ -31,7 +31,7 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_DIR="$BASE_DIR/dotfiles"
 if ! [[ -d "$DOTFILES_DIR" ]]; then
     echo 'Installing dotfiles'
-    git clone https://github.com/joshingmachine/dotfiles.git "$DOTFILES_DIR"
+    git clone --quiet https://github.com/joshingmachine/dotfiles.git "$DOTFILES_DIR"
 else
     echo 'Updating dotfiles'
     cd "$DOTFILES_DIR"
@@ -42,7 +42,7 @@ fi
 export NVM_DIR="$HOME/.nvm"
 if ! [[ -s "$NVM_DIR/nvm.sh" ]]; then
     echo 'Installing nvm'
-    git clone https://github.com/creationix/nvm.git "$NVM_DIR"
+    git clone --quiet https://github.com/creationix/nvm.git "$NVM_DIR"
     cd "$NVM_DIR"
     git fetch --tags
     latestTag=$(git describe --tags)
