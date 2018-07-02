@@ -25,6 +25,7 @@ set nocompatible
 syntax on
 set number
 set encoding=utf-8
+set autoread
 let g:netrw_banner=0
 
 " SEARCH
