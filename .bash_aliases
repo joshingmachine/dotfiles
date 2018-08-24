@@ -16,6 +16,9 @@ alias taf="tmux-af"
 # Just for fun
 alias please="sudo"
 
+# S/O @minamarkham https://twitter.com/minamarkham/status/1002268342755864581
+alias ffsnpm="rm -rf node_modules && npm cache clean -f && npm i"
+
 # Inspiration
 # https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
 # https://github.com/webpro/dotfiles/blob/master/system/.alias
