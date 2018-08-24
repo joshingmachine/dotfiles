@@ -8,5 +8,4 @@ node_modules/
 .vim/.netrwhist
 .vim/autoload/
 .vim/colors/
-.vim/ftplugin/
 .vim/plugged/
