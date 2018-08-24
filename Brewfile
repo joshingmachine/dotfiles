@@ -6,7 +6,7 @@ brew 'lastpass-cli', args: ['with-pinentry']
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'tree'
-brew 'vim', args: ['override-system-vi']
+brew 'vim', args: ['override-system-vi', 'with-python@2']
 brew 'wget'
 brew 'yarn', args: ['without-node']
 brew 'zsh'
