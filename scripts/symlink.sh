@@ -2,6 +2,7 @@
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+ln -s ${BASEDIR}/.bash_aliases ${HOME}/.bash_aliases
 ln -s ${BASEDIR}/.bashrc ${HOME}/.bashrc
 ln -s ${BASEDIR}/.editorconfig ${HOME}/.editorconfig
 ln -s ${BASEDIR}/.eslintrc.js ${HOME}/.eslintrc.js
