@@ -35,8 +35,12 @@ set smartcase
 
 syntax enable
 colorscheme night-owl
-" Overwrite comment style, since it currently highlights background
-hi Comment guifg=#637777 ctermfg=243 guibg=#011627 ctermbg=233 gui=italic cterm=italic
+" Overwrite comment style, since it currently
+" highlights the background for me (not sure why)
+hi Comment ctermfg=233 ctermbg=243
+hi jsComment ctermfg=233 ctermbg=243
+hi javaScriptLineComment ctermfg=233 ctermbg=243
+hi shComment ctermfg=233 ctermbg=243
 
 " I don't like the forced wrap that `editorconfig-vim` provides,
 " so I disable `max_line_length` and use `colorcolumn` instead.
