@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'haishanh/night-owl.vim', { 'dir': '~/.vim/colors/night-owl.vim' }
+Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
