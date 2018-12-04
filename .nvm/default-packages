@@ -4,5 +4,6 @@ eslint-config-prettier
 eslint-plugin-prettier
 prettier
 prettier-config-joshingmachine
+react-native-cli
 stylelint
 stylelint-config-joshingmachine
