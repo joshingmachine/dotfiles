@@ -12,6 +12,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         brew cleanup
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
     fi
+    
+    # Docker for Mac
+    /Applications/Docker.app/Contents/MacOS/Docker --uninstall
 
 # Ubuntu
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
