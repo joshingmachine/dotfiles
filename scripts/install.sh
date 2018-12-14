@@ -16,6 +16,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
     # Install everything in Brewfile
     brew bundle
+    
+    # Docker for Mac
+    wget -P "$HOME/Downloads" "https://download.docker.com/mac/stable/Docker.dmg"
+    hdiutil attach $HOME/Downloads/Docker.dmg
+    cp -R "/Volumes/Docker/Docker.app" /Applications
+    hdiutil unmount /Volumes/Docker/
 
 # Ubuntu
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
