@@ -31,3 +31,6 @@ if [[ -d "$NVM_DIR" ]]; then
     echo 'Uninstalling nvm'
     rm -rf "$NVM_DIR"
 fi
+
+# rustup
+rustup self uninstall
