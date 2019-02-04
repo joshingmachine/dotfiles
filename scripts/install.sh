@@ -59,3 +59,6 @@ if ! [[ -s "$NVM_DIR/nvm.sh" ]]; then
 else
     echo 'nvm already installed'
 fi
+
+# rustup
+curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
