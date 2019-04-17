@@ -8,6 +8,7 @@ ln -s ${BASEDIR}/.editorconfig ${HOME}/.editorconfig
 ln -s ${BASEDIR}/.eslintrc.js ${HOME}/.eslintrc.js
 ln -s ${BASEDIR}/.gitconfig ${HOME}/.gitconfig
 ln -s ${BASEDIR}/.gitignore ${HOME}/.gitignore
+ln -s ${BASEDIR}/.ignore ${HOME}/.ignore
 ln -s ${BASEDIR}/.tmux.conf ${HOME}/.tmux.conf
 ln -s ${BASEDIR}/.vim/ ${HOME}/.vim
 ln -s ${BASEDIR}/.zshrc ${HOME}/.zshrc
