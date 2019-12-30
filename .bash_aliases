@@ -10,7 +10,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # ag
-alias ag='ag --hidden --path-to-ignore ~/.ignore'
+alias ag='ag --hidden --skip-vcs-ignores --path-to-ignore ~/.ignore'
 
 # tmux + fzf
 alias tmux-af='tmux a -t $(tmux ls -F "#{session_name}" | fzf)'
