@@ -1,5 +1,16 @@
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
 
+# Better prompt
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+blue="\[\e[34m\]"
+green="\[\e[32m\]"
+red="\[\e[31m\]"
+reset="\[\e[0m\]"
+PS1="$blue\u@\h $green\w $red\$(parse_git_branch)\n$reset$ "
+
 # fzf
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 export FZF_DEFAULT_COMMAND='ag --hidden --files-with-matches -g "" --path-to-ignore ~/.ignore'
