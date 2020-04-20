@@ -11,6 +11,5 @@ ln -s ${BASEDIR}/.gitignore ${HOME}/.gitignore
 ln -s ${BASEDIR}/.ignore ${HOME}/.ignore
 ln -s ${BASEDIR}/.tmux.conf ${HOME}/.tmux.conf
 ln -s ${BASEDIR}/.vim/ ${HOME}/.vim
-ln -s ${BASEDIR}/.zshrc ${HOME}/.zshrc
 
 # http://www.anishathalye.com/2014/08/03/managing-your-dotfiles/

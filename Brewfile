@@ -11,7 +11,6 @@ brew 'tree'
 brew 'vim', args: ['override-system-vi', 'with-python@2']
 brew 'wget'
 brew 'yarn', args: ['without-node']
-brew 'zsh'
 
 cask 'alacritty'
 cask 'darktable'
