@@ -5,6 +5,7 @@ brew 'git'
 brew 'lastpass-cli', args: ['with-pinentry']
 brew 'postgresql'
 brew 'pyenv'
+brew 'shellcheck'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'tree'
