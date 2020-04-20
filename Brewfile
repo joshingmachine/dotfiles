@@ -13,6 +13,7 @@ brew 'wget'
 brew 'yarn', args: ['without-node']
 brew 'zsh'
 
+cask 'alacritty'
 cask 'darktable'
 cask 'firefox'
 cask 'gimp'
