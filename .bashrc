@@ -1,14 +1,21 @@
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
 
 # Better prompt
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
 blue="\[\e[0;34m\]"
 green="\[\e[0;32m\]"
 red="\[\e[0;31m\]"
 reset="\[\e[0m\]"
+
+parse_git_branch() {
+    hasmod=""
+
+    if [[ `git ls-files -dmo --exclude-standard 2> /dev/null` ]]; then
+        hasmod="*"
+    fi
+
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$hasmod)/"
+}
+
 PS1="$blue\u@\h $green\w $red\$(parse_git_branch)\n$reset$ "
 
 # fzf
