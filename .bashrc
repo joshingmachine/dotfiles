@@ -5,9 +5,9 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-blue="\[\e[34m\]"
-green="\[\e[32m\]"
-red="\[\e[31m\]"
+blue="\[\e[0;34m\]"
+green="\[\e[0;32m\]"
+red="\[\e[0;31m\]"
 reset="\[\e[0m\]"
 PS1="$blue\u@\h $green\w $red\$(parse_git_branch)\n$reset$ "
 
