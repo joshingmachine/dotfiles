@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Default options
-alias ls="ls -aFl"
+alias ls="ls -aFGl"
 
 # Quick navigation
 alias ..="cd .."
