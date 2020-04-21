@@ -16,10 +16,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
     # Install everything in Brewfile
     brew bundle
-    
+
     # Docker for Mac
     wget -P "$HOME/Downloads" "https://download.docker.com/mac/stable/Docker.dmg"
-    hdiutil attach $HOME/Downloads/Docker.dmg
+    hdiutil attach "$HOME/Downloads/Docker.dmg"
     cp -R "/Volumes/Docker/Docker.app" /Applications
     hdiutil unmount /Volumes/Docker/
 
@@ -52,7 +52,7 @@ if ! [[ -s "$NVM_DIR/nvm.sh" ]]; then
     cd "$NVM_DIR"
     git fetch --tags
     latestTag=$(git describe --tags)
-    git checkout $latestTag
+    git checkout "$latestTag"
 
     echo 'Symlinking default npm packages'
     ln -s "$DOTFILES_DIR/.nvm/default-packages" "$NVM_DIR/default-packages"
