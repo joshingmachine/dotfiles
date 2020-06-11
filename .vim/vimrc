@@ -17,6 +17,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
 Plug 'w0rp/ale'
 
 " Initialize plugin system
@@ -53,6 +54,9 @@ hi Todo ctermfg=233 ctermbg=222
 let g:EditorConfig_disable_rules = ['max_line_length']
 set colorcolumn=80
 
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
+
 " REMAPS
 
 " Disable arrow keys in normal mode
@@ -65,13 +69,15 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-" Disable hjkl keys in normal mode
+" Disable hl keys in normal mode
+" nnoremap k <nop>
+" nnoremap j <nop>
 nnoremap h <nop>
-nnoremap j <nop>
-nnoremap k <nop>
 nnoremap l <nop>
 " Map ctrl+p to open fzf
 nnoremap <c-p> :FZF!<enter>
+" Map ctrl+n to open NerdTree
+map <C-n> :NERDTreeToggle<CR>
 
 " FZF
 
