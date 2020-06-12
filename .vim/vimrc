@@ -17,6 +17,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'preservim/nerdtree'
+Plug 'quramy/tsuquyomi'
 Plug 'ryanoasis/vim-devicons' " must come after nerdtree
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
