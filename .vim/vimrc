@@ -16,8 +16,9 @@ Plug 'haishanh/night-owl.vim', { 'dir': '~/.vim/colors/night-owl.vim' }
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons' " must come after nerdtree
+Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 
 " Initialize plugin system
