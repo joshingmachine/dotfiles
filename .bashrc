@@ -2,8 +2,11 @@
 
 # Better prompt
 blue="\[\e[0;34m\]"
+usericon=$'\xef\x8a\xbe'
 green="\[\e[0;32m\]"
+directoryicon=$'\xef\x90\x93'
 red="\[\e[0;31m\]"
+giticon=$'\xee\x9c\xa5'
 reset="\[\e[0m\]"
 
 parse_git_branch() {
@@ -13,10 +16,10 @@ parse_git_branch() {
         hasmod="*"
     fi
 
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$hasmod)/"
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/$giticon \1$hasmod/"
 }
 
-PS1="$blue\u@\h $green\w $red\$(parse_git_branch)\n$reset$ "
+PS1="$blue$usericon \u @ \h $green$directoryicon \w $red\$(parse_git_branch)\n$reset$ "
 
 # fzf
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
