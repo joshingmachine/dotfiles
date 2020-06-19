@@ -11,5 +11,7 @@
     editor = /usr/bin/vim
 [diff]
     algorithm = patience
+[init]
+    templateDir = ~/.config/git/template
 [push]
     followTags = true
