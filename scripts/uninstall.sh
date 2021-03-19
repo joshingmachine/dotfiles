@@ -12,7 +12,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         brew cleanup
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
     fi
-    
+
     # Docker for Mac
     /Applications/Docker.app/Contents/MacOS/Docker --uninstall
 
@@ -25,12 +25,8 @@ fi
 
 # Platform-independent uninstallations
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-if [[ -d "$NVM_DIR" ]]; then
-    echo 'Uninstalling nvm'
-    rm -rf "$NVM_DIR"
-fi
-
 # rustup
 rustup self uninstall
+
+# volta
+rm -rf "$HOME/.volta"

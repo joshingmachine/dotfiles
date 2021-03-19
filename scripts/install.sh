@@ -44,21 +44,8 @@ else
     git pull
 fi
 
-# nvm (depends on git)
-export NVM_DIR="$HOME/.nvm"
-if ! [[ -s "$NVM_DIR/nvm.sh" ]]; then
-    echo 'Installing nvm'
-    git clone --quiet https://github.com/creationix/nvm.git "$NVM_DIR"
-    cd "$NVM_DIR"
-    git fetch --tags
-    latestTag=$(git describe --tags)
-    git checkout "$latestTag"
-
-    echo 'Symlinking default npm packages'
-    ln -s "$DOTFILES_DIR/.nvm/default-packages" "$NVM_DIR/default-packages"
-else
-    echo 'nvm already installed'
-fi
-
 # rustup
 curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
+
+# volta
+curl https://get.volta.sh | bash -s -- --skip-setup
