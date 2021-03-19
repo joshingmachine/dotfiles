@@ -2,3 +2,5 @@
 /node_modules/
 /build/
 /.jest/
+/sitespeed-result/
+/test/cache/
