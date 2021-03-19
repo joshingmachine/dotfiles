@@ -3,6 +3,7 @@
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 ln -s "${BASEDIR}/.bashrc" "${HOME}/.bashrc"
+ln -s "${BASEDIR}/coc-settings.json" "${HOME}/coc-settings.json"
 ln -s "${BASEDIR}/.config/" "${HOME}/.config"
 ln -s "${BASEDIR}/.editorconfig" "${HOME}/.editorconfig"
 ln -s "${BASEDIR}/.eslintrc.js" "${HOME}/.eslintrc.js"

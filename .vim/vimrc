@@ -10,28 +10,42 @@ endif
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'APZelos/blamer.nvim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'haishanh/night-owl.vim', { 'dir': '~/.vim/colors/night-owl.vim' }
 Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'preservim/nerdtree'
-Plug 'quramy/tsuquyomi'
 Plug 'ryanoasis/vim-devicons' " must come after nerdtree
 Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
 
 " Initialize plugin system
 call plug#end()
 
 " OPTIONS
 
+set encoding=utf-8
 set nocompatible
 set number
-set encoding=utf-8
 set autoread
+" Give more space for displaying messages.
+set cmdheight=2
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
 let g:netrw_banner=0
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+	" Recently vim can merge signcolumn and number column into one
+	set signcolumn=number
+else
+	set signcolumn=yes
+endif
 
 " SEARCH
 set hlsearch
@@ -50,6 +64,7 @@ hi javaScriptLineComment ctermfg=233 ctermbg=243
 hi shComment ctermfg=233 ctermbg=243
 " Give 'TODO' comment keywords greater foreground contrast
 hi Todo ctermfg=233 ctermbg=222
+hi CocErrorFloat ctermfg=253
 
 " I don't like the forced wrap that `editorconfig-vim` provides,
 " so I disable `max_line_length` and use `colorcolumn` instead.
@@ -59,6 +74,14 @@ set colorcolumn=80
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
+" blamer
+let g:blamer_prefix = '    '
+let g:blamer_template = '<committer>, <committer-time> • <commit-short> <summary>'
+let g:blamer_date_format = '%Y-%m-%dT%H:%M:%S'
+
+" coc
+let g:coc_global_extensions = ['coc-json']
+
 " REMAPS
 
 " Disable arrow keys in normal mode
@@ -67,8 +90,8 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 " Disable arrow keys in insert mode
-inoremap <up> <nop>
-inoremap <down> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 " Disable hl keys in normal mode
@@ -80,6 +103,15 @@ nnoremap l <nop>
 nnoremap <c-p> :FZF!<enter>
 " Map ctrl+n to open NerdTree
 map <C-n> :NERDTreeToggle<CR>
+" Map ctrl+b to toggle BlamerToggle
+map <C-b> :BlamerToggle<CR>
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " FZF
 

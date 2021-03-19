@@ -11,4 +11,5 @@ node_modules/
 .vim/plugged/
 
 # config
+.config/coc
 .config/configstore
