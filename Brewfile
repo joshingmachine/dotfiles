@@ -9,7 +9,7 @@ brew 'shellcheck'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'tree'
-brew 'vim', args: ['override-system-vi', 'with-python@2']
+brew 'vim', args: ['override-system-vi']
 brew 'wget'
 brew 'yarn', args: ['without-node']
 
