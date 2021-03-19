@@ -4,14 +4,12 @@ brew 'curl'
 brew 'git'
 brew 'lastpass-cli', args: ['with-pinentry']
 brew 'postgresql'
-brew 'pyenv'
 brew 'shellcheck'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'tree'
 brew 'vim', args: ['override-system-vi']
 brew 'wget'
-brew 'yarn', args: ['without-node']
 
 cask 'alacritty'
 cask 'darktable'
