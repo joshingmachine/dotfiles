@@ -19,26 +19,10 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/$giticon \1$hasmod/"
 }
 
+# user icon, user name, and user host in blue
+# directory icon and current directory in green
+# git icon and branch name in red (when in git directory)
 PS1="$blue$usericon \u @ \h $green$directoryicon \w $red\$(parse_git_branch)\n$reset$ "
-
-# fzf
-[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
-export FZF_DEFAULT_COMMAND='ag --hidden --files-with-matches -g "" --path-to-ignore ~/.ignore'
-export FZF_DEFAULT_OPTS="--layout=reverse"
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# gvm
-[[ -s $HOME/.gvm/scripts/gvm ]] && source $HOME/.gvm/scripts/gvm
-export GOPATH=$HOME/Development/go
-
-# pyenv
-[ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)"
-
-# Java
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -47,5 +31,21 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# fzf
+[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
+export FZF_DEFAULT_COMMAND='ag --hidden --files-with-matches -g "" --path-to-ignore ~/.ignore'
+export FZF_DEFAULT_OPTS="--layout=reverse"
+
+# gvm
+[[ -s $HOME/.gvm/scripts/gvm ]] && source $HOME/.gvm/scripts/gvm
+export GOPATH=$HOME/Development/go
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
 # Rust
 export PATH=$PATH:$HOME/.cargo/bin
+
+# Volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
