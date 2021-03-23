@@ -1,8 +1,16 @@
 # Josh's dotfiles
 
-I'm going to be honest, I have no idea what I'm doing here.
+These are my dotfiles for macOS and Ubuntu.
 
-Mainly I'm just emulating the "classics", which I'll put below to credit them (but mainly just to help me remember to steal more from them as I continue to work on this).
+## Install
+
+_Requires [curl](https://curl.se/) and [bash](https://www.gnu.org/software/bash/)._
+
+```sh
+curl https://raw.githubusercontent.com/joshingmachine/dotfiles/main/scripts/install.sh | bash
+```
+
+## Inspiration
 
 - https://github.com/holman/dotfiles
 - https://github.com/mathiasbynens/dotfiles
