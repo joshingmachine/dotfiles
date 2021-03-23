@@ -13,3 +13,7 @@ node_modules/
 # config
 .config/coc
 .config/configstore
+
+# swapfiles
+.swo
+.swp
