@@ -1,32 +1,20 @@
 #!/usr/bin/env bash
 
-# Platform-dependent uninstallations
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$DIR/dotfiles"
+TOOLS_DIR="$DOTFILES_DIR/tools"
 
-# Mac
-if [[ "$OSTYPE" == "darwin"* ]]; then
+# Homebrew
+source "$TOOLS_DIR/homebrew/uninstall.sh"
 
-    # Homebrew
-    if [[ $(command -v brew) != "" ]]; then
-        echo 'Uninstalling Homebrew'
-        brew remove --force --ignore-dependencies $(brew list)
-        brew cleanup
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
-    fi
-
-    # Docker for Mac
-    /Applications/Docker.app/Contents/MacOS/Docker --uninstall
-
-# Ubuntu
-elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-
-    # Coming soon
-    echo "No Ubuntu-specific uninstallations"
-fi
-
-# Platform-independent uninstallations
+# Docker
+source "$TOOLS_DIR/docker/uninstall.sh"
 
 # rustup
-rustup self uninstall
+source "$TOOLS_DIR/rustup/uninstall.sh"
 
 # volta
-rm -rf "$HOME/.volta"
+source "$TOOLS_DIR/volta/uninstall.sh"
+
+# dotfiles
+rm -rf "$DOTFILES_DIR"

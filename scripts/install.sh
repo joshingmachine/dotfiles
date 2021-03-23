@@ -1,51 +1,30 @@
 #!/usr/bin/env bash
 
-# Platform-dependent installations
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$DIR/dotfiles"
+TOOLS_DIR="$DOTFILES_DIR/tools"
 
-# Mac
-if [[ "$OSTYPE" == "darwin"* ]]; then
-
-    # Homebrew
-    if [[ $(command -v brew) == "" ]]; then
-        echo 'Installing Homebrew'
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    else
-        echo 'Updating Homebrew'
-        brew update
-    fi
-
-    # Install everything in Brewfile
-    brew bundle
-
-    # Docker for Mac
-    wget -P "$HOME/Downloads" "https://download.docker.com/mac/stable/Docker.dmg"
-    hdiutil attach "$HOME/Downloads/Docker.dmg"
-    cp -R "/Volumes/Docker/Docker.app" /Applications
-    hdiutil unmount /Volumes/Docker/
-
-# Ubuntu
-elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-
-    # Coming soon
-    echo "No Ubuntu-specific installations"
-fi
-
-# Platform-independent installations
+# git
+source "$TOOLS_DIR/git/install.sh"
 
 # dotfiles (depends on git)
-BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DOTFILES_DIR="$BASE_DIR/dotfiles"
 if ! [[ -d "$DOTFILES_DIR" ]]; then
     echo 'Installing dotfiles'
     git clone --quiet https://github.com/joshingmachine/dotfiles.git "$DOTFILES_DIR"
 else
-    echo 'Updating dotfiles'
-    cd "$DOTFILES_DIR"
-    git pull
+    echo 'dotfiles already installed'
 fi
 
+# TODO: Don't list out each tool, have a command that installs all tools
+
+# Homebrew
+source "$TOOLS_DIR/homebrew/install.sh"
+
+# Docker
+source "$TOOLS_DIR/docker/install.sh"
+
 # rustup
-curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
+source "$TOOLS_DIR/rustup/install.sh"
 
 # volta
-curl https://get.volta.sh | bash -s -- --skip-setup
+source "$TOOLS_DIR/volta/install.sh"
