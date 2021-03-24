@@ -6,7 +6,6 @@ brew 'postgresql'
 brew 'shellcheck'
 brew 'the_silver_searcher'
 brew 'tree'
-brew 'vim', args: ['override-system-vi']
 brew 'wget'
 
 cask 'alacritty'

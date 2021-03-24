@@ -7,6 +7,9 @@ TOOLS_DIR="$DOTFILES_DIR/tools"
 # Docker
 source "$TOOLS_DIR/docker/uninstall.sh"
 
+# vim
+source "$TOOLS_DIR/vim/uninstall.sh"
+
 # tmux
 source "$TOOLS_DIR/tmux/uninstall.sh"
 

@@ -23,6 +23,9 @@ source "$TOOLS_DIR/homebrew/install.sh"
 # Docker
 source "$TOOLS_DIR/docker/install.sh"
 
+# vim
+source "$TOOLS_DIR/vim/install.sh"
+
 # tmux
 source "$TOOLS_DIR/tmux/install.sh"
 
