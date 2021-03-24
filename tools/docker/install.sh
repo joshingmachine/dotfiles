@@ -9,7 +9,7 @@ if [[ $(command -v docker) != "" ]]; then
 	exit
 fi
 
-# Mac
+# macOS
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	wget -P "$HOME/Downloads" "https://download.docker.com/mac/stable/Docker.dmg"
 	hdiutil attach "$HOME/Downloads/Docker.dmg"

@@ -1,7 +1,6 @@
 cask_args appdir: '/Applications'
 
 brew 'curl'
-brew 'git'
 brew 'lastpass-cli', args: ['with-pinentry']
 brew 'postgresql'
 brew 'shellcheck'
