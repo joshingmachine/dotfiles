@@ -17,20 +17,10 @@ fi
 
 # TODO: Don't list out each tool, have a command that installs all tools
 
-# Homebrew
-source "$TOOLS_DIR/homebrew/install.sh"
-
-# Docker
+source "$TOOLS_DIR/homebrew/install.sh" # must be first
 source "$TOOLS_DIR/docker/install.sh"
-
-# vim
-source "$TOOLS_DIR/vim/install.sh"
-
-# tmux
-source "$TOOLS_DIR/tmux/install.sh"
-
-# rustup
+source "$TOOLS_DIR/lastpass-cli/install.sh"
 source "$TOOLS_DIR/rustup/install.sh"
-
-# volta
+source "$TOOLS_DIR/tmux/install.sh"
+source "$TOOLS_DIR/vim/install.sh"
 source "$TOOLS_DIR/volta/install.sh"
