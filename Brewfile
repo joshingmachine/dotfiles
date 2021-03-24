@@ -3,7 +3,6 @@ cask_args appdir: '/Applications'
 brew 'curl'
 brew 'postgresql'
 brew 'shellcheck'
-brew 'the_silver_searcher'
 brew 'tree'
 brew 'wget'
 

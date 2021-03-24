@@ -18,6 +18,7 @@ fi
 # TODO: Don't list out each tool, have a command that installs all tools
 
 source "$TOOLS_DIR/homebrew/install.sh" # must be first
+source "$TOOLS_DIR/ag/install.sh"
 source "$TOOLS_DIR/docker/install.sh"
 source "$TOOLS_DIR/lastpass-cli/install.sh"
 source "$TOOLS_DIR/rustup/install.sh"
