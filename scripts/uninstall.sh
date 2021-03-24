@@ -7,6 +7,7 @@ TOOLS_DIR="$DOTFILES_DIR/tools"
 # TODO: Don't list out each tool, have a command that uninstalls all tools
 
 source "$TOOLS_DIR/ag/uninstall.sh"
+source "$TOOLS_DIR/alacritty/uninstall.sh"
 source "$TOOLS_DIR/docker/uninstall.sh"
 source "$TOOLS_DIR/lastpass-cli/uninstall.sh"
 source "$TOOLS_DIR/rustup/uninstall.sh"

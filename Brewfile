@@ -6,7 +6,6 @@ brew 'shellcheck'
 brew 'tree'
 brew 'wget'
 
-cask 'alacritty'
 cask 'darktable'
 cask 'firefox'
 cask 'gimp'

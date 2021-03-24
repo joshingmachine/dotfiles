@@ -19,6 +19,7 @@ fi
 
 source "$TOOLS_DIR/homebrew/install.sh" # must be first
 source "$TOOLS_DIR/ag/install.sh"
+source "$TOOLS_DIR/alacritty/install.sh"
 source "$TOOLS_DIR/docker/install.sh"
 source "$TOOLS_DIR/lastpass-cli/install.sh"
 source "$TOOLS_DIR/rustup/install.sh"
