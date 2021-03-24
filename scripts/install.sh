@@ -23,6 +23,9 @@ source "$TOOLS_DIR/homebrew/install.sh"
 # Docker
 source "$TOOLS_DIR/docker/install.sh"
 
+# tmux
+source "$TOOLS_DIR/tmux/install.sh"
+
 # rustup
 source "$TOOLS_DIR/rustup/install.sh"
 
