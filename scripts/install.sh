@@ -4,6 +4,9 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_DIR="$DIR/dotfiles"
 TOOLS_DIR="$DOTFILES_DIR/tools"
 
+# Install OS package manager
+source "$TOOLS_DIR/homebrew/install.sh" # must be first
+
 # git
 source "$TOOLS_DIR/git/install.sh"
 
@@ -17,7 +20,6 @@ fi
 
 # TODO: Don't list out each tool, have a command that installs all tools
 
-source "$TOOLS_DIR/homebrew/install.sh" # must be first
 source "$TOOLS_DIR/ag/install.sh"
 source "$TOOLS_DIR/alacritty/install.sh"
 source "$TOOLS_DIR/docker/install.sh"
