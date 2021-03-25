@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Set default shell to bash
 chsh -s /bin/bash
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -20,6 +21,11 @@ else
     echo 'dotfiles already installed'
 fi
 
+# Accept xcode license
+if [[ $(command -v brew) != "" ]]; then
+	sudo xcodebuild -license accept
+fi
+
 # TODO: Don't list out each tool, have a command that installs all tools
 
 source "$TOOLS_DIR/ag/install.sh"
@@ -30,3 +36,5 @@ source "$TOOLS_DIR/rustup/install.sh"
 source "$TOOLS_DIR/tmux/install.sh"
 source "$TOOLS_DIR/vim/install.sh"
 source "$TOOLS_DIR/volta/install.sh"
+
+
