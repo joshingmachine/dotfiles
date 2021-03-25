@@ -24,6 +24,9 @@ parse_git_branch() {
 # git icon and branch name in red (when in git directory)
 PS1="$blue$usericon \u @ \h $green$directoryicon \w $red\$(parse_git_branch)\n$reset$ "
 
+# Silence warning on Mac to use zsh
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -49,3 +52,5 @@ export PATH=$PATH:$HOME/.cargo/bin
 # Volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
