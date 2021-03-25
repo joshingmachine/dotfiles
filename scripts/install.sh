@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+chsh -s /bin/bash
+
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_DIR="$DIR/dotfiles"
 TOOLS_DIR="$DOTFILES_DIR/tools"
