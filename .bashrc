@@ -6,29 +6,9 @@ if [[ -f "$DOTFILES_DIR/.bash_aliases" ]]; then
 	source "$DOTFILES_DIR/.bash_aliases"
 fi
 
-# Better prompt
-blue="\[\e[0;34m\]"
-usericon=$'\xef\x8a\xbe'
-green="\[\e[0;32m\]"
-directoryicon=$'\xef\x90\x93'
-red="\[\e[0;31m\]"
-giticon=$'\xee\x9c\xa5'
-reset="\[\e[0m\]"
-
-parse_git_branch() {
-    hasmod=""
-
-    if [[ `git ls-files -dmo --exclude-standard 2> /dev/null` ]]; then
-        hasmod="*"
-    fi
-
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/$giticon \1$hasmod/"
-}
-
-# user icon, user name, and user host in blue
-# directory icon and current directory in green
-# git icon and branch name in red (when in git directory)
-PS1="$blue$usericon \u @ \h $green$directoryicon \w $red\$(parse_git_branch)\n$reset$ "
+if [[ -f "$DOTFILES_DIR/.bash_prompt" ]]; then
+	source "$DOTFILES_DIR/.bash_prompt"
+fi
 
 # Silence warning on Mac to use zsh
 export BASH_SILENCE_DEPRECATION_WARNING=1
