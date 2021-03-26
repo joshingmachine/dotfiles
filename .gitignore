@@ -15,5 +15,5 @@ node_modules/
 .config/configstore
 
 # swapfiles
-.swo
-.swp
+*.swo
+*.swp
