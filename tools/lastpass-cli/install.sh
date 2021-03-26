@@ -19,7 +19,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 		source "$DIR/../homebrew/install.sh"
 	fi
 
-	brew install lastpass-cli --with-pinentry
+	brew install lastpass-cli
 
 # Ubuntu
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
