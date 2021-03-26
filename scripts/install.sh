@@ -36,5 +36,6 @@ source "$TOOLS_DIR/rustup/install.sh"
 source "$TOOLS_DIR/tmux/install.sh"
 source "$TOOLS_DIR/vim/install.sh"
 source "$TOOLS_DIR/volta/install.sh"
+source "$TOOLS_DIR/zoom/install.sh"
 
 

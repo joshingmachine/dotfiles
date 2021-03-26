@@ -14,6 +14,7 @@ source "$TOOLS_DIR/rustup/uninstall.sh"
 source "$TOOLS_DIR/tmux/uninstall.sh"
 source "$TOOLS_DIR/vim/uninstall.sh"
 source "$TOOLS_DIR/volta/uninstall.sh"
+source "$TOOLS_DIR/zoom/uninstall.sh"
 source "$TOOLS_DIR/homebrew/uninstall.sh" # must be last
 
 # dotfiles
