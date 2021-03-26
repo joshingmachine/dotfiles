@@ -10,6 +10,13 @@ if [[ $(command -v git) == "" ]]; then
 	source "$DIR/../git/install.sh"
 fi
 
-# TODO: Install Fira Mono
+NERDFONTS_DIR="$HOME/Development/nerd-fonts"
+
+if ! [[ -d "$NERDFONTS_DIR" ]]; then
+	git clone https://github.com/ryanoasis/nerd-fonts.git "$NERDFONTS_DIR"
+fi
+
+cd "$NERDFONTS_DIR"
+source ./install.sh "FiraMono"
 
 echo 'Fira Mono installed'
