@@ -1,4 +1,10 @@
-[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+# Get the dotfiles directory by using readlink to find the non-symlink
+# location of .bashrc
+DOTFILES_DIR="$(dirname "$(readlink ~/.bashrc)")"
+
+if [[ -f "$DOTFILES_DIR/.bash_aliases" ]]; then
+	source "$DOTFILES_DIR/.bash_aliases"
+fi
 
 # Better prompt
 blue="\[\e[0;34m\]"
