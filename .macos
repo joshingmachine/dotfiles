@@ -9,3 +9,9 @@ killall Finder
 
 # Enable Full Keyboard Access / All controls
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Always show scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+
+# Use column view in all Finder windows by default
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
